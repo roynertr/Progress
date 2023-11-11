@@ -70,6 +70,12 @@ button:hover {
   background-color: var(--primary-400);
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 /* Sidebar styles */
 
 #sidebar {
@@ -218,4 +224,21 @@ input, textarea, select {
 
 input:focus, textarea:focus, select:focus {
   outline: 2px solid var(--primary);
+}
+
+/* Project details page */
+
+.dashboard-card {
+  background-color: var(--background-100);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+#project-details > .main-page-content {
+  display: grid;
+  padding: 20px 40px;
+  gap: 30px;
+  grid-template-columns: 475px 1fr;
+  height: 100%;
 }
