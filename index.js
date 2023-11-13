@@ -20,7 +20,14 @@ if (projectForm) {
   projectForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const formData = new FormData(projectForm)
-    console.log("Description:", formData.get("description"))
+    const project = {
+      name: formData.get("name"),
+      description: formData.get("description"),
+      status: formData.get("status"),
+      userRole: formData.get("userRole"),
+      finishDate: formData.get("finishDate")
+    }
+    console.log(project)
   })
 } else {
 	console.warn("The project form was not found. Check the ID!")
