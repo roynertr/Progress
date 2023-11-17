@@ -1,3 +1,4 @@
+import * as THREE from "three"
 import { IProject, ProjectStatus, UserRole } from "./classes/Project"
 import { ProjectsManager } from "./classes/ProjectsManager"
 
@@ -68,3 +69,18 @@ if (importProjectsBtn) {
     projectsManager.importFromJSON()
   })
 }
+
+//ThreeJS viewer
+const scene = new THREE.Scene()
+
+const viewerContainer = document.getElementById("viewer-container") as HTMLElement
+
+const containerDimensions = viewerContainer.getBoundingClientRect()
+const aspectRatio = containerDimensions.width / containerDimensions.height
+const camera = new THREE.PerspectiveCamera(75, aspectRatio)
+
+const renderer = new THREE.WebGLRenderer()
+viewerContainer.append(renderer.domElement)
+renderer.setSize(containerDimensions.width, containerDimensions.height)
+
+renderer.render(scene, camera)
