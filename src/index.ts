@@ -1,4 +1,5 @@
 import * as THREE from "three"
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
 import { IProject, ProjectStatus, UserRole } from "./classes/Project"
 import { ProjectsManager } from "./classes/ProjectsManager"
 
@@ -90,7 +91,15 @@ const cube = new THREE.Mesh(boxGeometry, material)
 
 const directionalLight = new THREE.DirectionalLight()
 const ambientLight = new THREE.AmbientLight()
+ambientLight.intensity = 0.4
 
 scene.add(cube, directionalLight, ambientLight)
 
-renderer.render(scene, camera)
+const cameraControls = new OrbitControls(camera, viewerContainer)
+
+function renderScene() {
+  renderer.render(scene, camera)
+  requestAnimationFrame(renderScene)
+}
+
+renderScene()
