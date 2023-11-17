@@ -42,6 +42,11 @@ export class ProjectsManager {
     if (!detailsPage) { return }
     const name = detailsPage.querySelector("[data-project-info='name']")
     if (name) { name.textContent = project.name }
+    const description = detailsPage.querySelector("[data-project-info='description']")
+    if (description) { description.textContent = project.description }
+    const cardName = detailsPage.querySelector("[data-project-info='cardName']")
+    if (cardName) { cardName.textContent = project.name }
+    const cardDescription = detailsPage.querySelector("[data-project-info='cardDescription']")
   }
 
   getProject(id: string) {
