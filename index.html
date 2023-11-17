@@ -54,8 +54,8 @@
               <input name="finishDate" type="date"></input>
             </div>
             <div style="display: flex; margin: 10px 0px 10px auto; column-gap: 10px;">
-              <button style="background-color: transparent;">Cancel</button>
-              <button style="background-color: rgb(18, 145, 18);">Accept</button>
+              <button type="button" style="background-color: transparent;">Cancel</button>
+              <button type="submit" style="background-color: rgb(18, 145, 18);">Accept</button>
             </div>
           </div>
         </form>
@@ -66,35 +66,7 @@
           <button id = "new-project-btn"><span class="material-icons-round">add</span>New Project</button>
         </div>
       </header>
-      <div id="projects-list">
-        <div class="project-card">
-          <div class="card-header">
-            <p style="background-color: #ca8134; padding: 10px; border-radius: 8px; aspect-ratio: 1;">HC</p>
-            <div>
-              <h5>Project Name</h5>
-              <p>Project Description Goes Here...</p>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-property">
-              <p style="color: #969696;">Status</p>
-              <p>Active</p>
-            </div>
-            <div class="card-property">
-              <p style="color: #969696;">Role</p>
-              <p>Engineer</p>
-            </div>
-            <div class="card-property">
-              <p style="color: #969696;">Cost</p>
-              <p>$2'000.000</p>
-            </div>
-            <div class="card-property">
-              <p style="color: #969696;">Estimated Progress</p>
-              <p>45%</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="projects-list"></div>
     </div>
     <div class="page" id="project-details" style="display: none">
       <header>
