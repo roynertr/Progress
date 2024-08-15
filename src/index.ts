@@ -1,6 +1,6 @@
 import * as THREE from "three"
-import { GUI } from "three/examples/jsm/libs/lil-gui.module.min"
-import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
+import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js"
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js"
 import { IProject, ProjectStatus, UserRole } from "./classes/Project"
 import { ProjectsManager } from "./classes/ProjectsManager"
 
@@ -131,3 +131,4 @@ cubeControls.add(cube.position, "y", -10, 10, 1)
 cubeControls.add(cube.position, "z", -10, 10, 1)
 cubeControls.add(cube, "visible")
 cubeControls.addColor(cube.material, "color")
+
