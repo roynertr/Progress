@@ -2,6 +2,8 @@ import * as THREE from "three"
 import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js"
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js"
 import { IProject, ProjectStatus, UserRole } from "./classes/Project"
+import {OBJLoader} from "three/examples/jsm/loaders/OBJLoader.js"
+import {MTLLoader} from "three/examples/jsm/loaders/MTLLoader.js"
 import { ProjectsManager } from "./classes/ProjectsManager"
 
 function showModal(id: string) {
@@ -132,3 +134,9 @@ cubeControls.add(cube.position, "z", -10, 10, 1)
 cubeControls.add(cube, "visible")
 cubeControls.addColor(cube.material, "color")
 
+const LightControls = gui.addFolder("DirectionalLight");
+
+LightControls.add(directionalLight.position, "x", -10, 10, 1);
+LightControls.add(directionalLight.position, "y", -10, 10, 1);
+LightControls.add(directionalLight.position, "z", -10, 10, 1);
+LightControls.add(directionalLight, "intensity", 0, 10, 1);
